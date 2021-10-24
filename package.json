@@ -1,0 +1,15 @@
+{
+  "name": "time-tracking-dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:scss": "node-sass scss/main.scss css/style.css -w",
+    "compile:scss": "node-sass scss/main.scss css/style.css"
+  },
+  "author": "Ken Nersisyan",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
