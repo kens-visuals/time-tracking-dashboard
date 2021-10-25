@@ -1,3 +1,183 @@
+.content {
+  width: 100%;
+  margin: 10rem 0;
+
+  & > * {
+    &:not(:last-child) {
+      margin-bottom: 6rem;
+    }
+    border-radius: 1.5rem;
+  }
+
+  &__person {
+    background-color: $color-primary--dark;
+
+    &-wrapper {
+      background-color: $color-tertiary;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      padding: 3rem;
+      display: flex;
+      align-items: center;
+    }
+
+    &-img {
+      width: 25%;
+      border: 3px solid $color-white;
+      border-radius: 50%;
+    }
+
+    &-info {
+      margin-left: 2rem;
+    }
+
+    &-report {
+      color: $color-secondary;
+      font-size: clamp(1.4rem, 2vw, 1.6rem);
+      font-weight: 400;
+    }
+
+    &-name {
+      font-size: clamp(2.3rem, 2vw, 4rem);
+      font-weight: 300;
+    }
+  }
+
+  &__options {
+    padding: 2rem 2rem 2rem 3.5rem;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link {
+    color: $color-primary--light;
+    font-size: clamp(1.8rem, 2vw, 2rem);
+    text-decoration: none;
+    transition: all 0.2s;
+
+    &--active {
+      color: $color-white;
+    }
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+
+  &__box {
+    background-color: $color-primary--dark;
+    padding: 2.5rem;
+    position: relative;
+    transition: all 0.2s;
+
+    &::before {
+      content: '';
+      width: 100%;
+      background-repeat: no-repeat;
+      border-radius: 1.5rem;
+      padding: 3rem;
+      position: absolute;
+      top: -3.5rem;
+      left: 0;
+      z-index: -1;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: $color-secondary--dark;
+    }
+
+    &--work {
+      &::before {
+        background-image: url(../images/icon-work.svg);
+        background-color: $color-orange;
+        background-position: top -1.2rem right 1.5rem;
+      }
+    }
+
+    &--play {
+      &::before {
+        background-image: url(../images/icon-play.svg);
+        background-color: $color-cyan;
+        background-position: top -0.6rem right 1.5rem;
+      }
+    }
+
+    &--study {
+      &::before {
+        background-image: url(../images/icon-study.svg);
+        background-color: $color-red;
+        background-position: top -0.8rem right 1.5rem;
+      }
+    }
+
+    &--exercise {
+      &::before {
+        background-image: url(../images/icon-exercise.svg);
+        background-color: $color-green;
+        background-position: top -0.5rem right 1.5rem;
+      }
+    }
+
+    &--social {
+      &::before {
+        background-image: url(../images/icon-social.svg);
+        background-color: $color-violet;
+        background-position: top -1.5rem right 1.5rem;
+      }
+    }
+
+    &--self-care {
+      &::before {
+        background-image: url(../images/icon-self-care.svg);
+        background-color: $color-yellow;
+        background-position: top -1.5rem right 1.5rem;
+      }
+    }
+
+    &-title-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &-title-option {
+      font-size: clamp(1.9rem, 2vw, 2rem);
+      font-weight: 400;
+    }
+
+    &-elipsis {
+      fill: $color-secondary;
+
+      & svg:hover {
+        fill: $color-white;
+        transition: all 0.2s;
+      }
+    }
+
+    &-hours {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &-hour {
+      font-size: clamp(3rem, 3vw, 6rem);
+      font-weight: 300;
+    }
+
+    &-date {
+      color: $color-secondary;
+      font-size: clamp(1.5rem, 2vw, 2rem);
+      opacity: 0.8;
+    }
+  }
+}
+
 .attribution {
   font-size: clamp(1rem, 2vw, 1.2rem);
   text-align: center;

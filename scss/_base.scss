@@ -1,25 +1,17 @@
-// $color-primary: ;
-// $color-primary--dark: ;
-// $color-primary--light: ;
-// $color-secondary: ;
-// $color-secondary--dark: ;
-// $color-secondary--light: ;
+$color-primary: hsl(226, 43%, 10%);
+$color-primary--dark: hsl(235, 46%, 20%);
+$color-primary--light: hsl(235, 45%, 61%);
+$color-secondary: hsl(236, 100%, 87%);
+$color-secondary--dark: hsl(236, 41%, 34%);
+$color-tertiary: hsl(246, 80%, 60%);
 
-// - Blue: hsl(246, 80%, 60%)
-
-// - Light red (work): hsl(15, 100%, 70%)
-// - Soft blue (play): hsl(195, 74%, 62%)
-// - Light red (study): hsl(348, 100%, 68%)
-// - Lime green (exercise): hsl(145, 58%, 55%)
-// - Violet (social): hsl(264, 64%, 52%)
-// - Soft orange (self care): hsl(43, 84%, 65%)
-
-// ### Neutral
-
-// - Very dark blue: hsl(226, 43%, 10%)
-// - Dark blue: hsl(235, 46%, 20%)
-// - Desaturated blue: hsl(235, 45%, 61%)
-// - Pale Blue: hsl(236, 100%, 87%)
+$color-orange: hsl(15, 100%, 70%);
+$color-cyan: hsl(195, 74%, 62%);
+$color-red: hsl(348, 100%, 68%);
+$color-green: hsl(145, 58%, 55%);
+$color-violet: hsl(264, 64%, 52%);
+$color-yellow: hsl(43, 84%, 65%);
+$color-white: hsl(220, 43%, 97%);
 
 *,
 *::before,
@@ -64,8 +56,13 @@ html {
 
 body {
   min-height: 100vh;
+  background-color: $color-primary;
+  color: $color-white;
   font-size: 1.6rem;
   font-family: 'Rubik', sans-serif;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  justify-items: center;
 }

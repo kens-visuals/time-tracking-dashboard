@@ -22,83 +22,157 @@
     <title>Frontend Mentor | Time Tracking Dashboard</title>
   </head>
   <body>
-    Report for Jeremy Robson Daily Weekly Monthly Work 5hrs
-    <!-- daily -->
-    Previous - 7hrs
-    <!-- daily -->
-    32hrs
-    <!-- weekly -->
-    Previous - 36hrs
-    <!-- weekly -->
-    103hrs
-    <!-- monthly -->
-    Previous - 128hrs
-    <!-- monthly -->
+    <div class="container">
+      <main class="content">
+        <div class="content__person">
+          <div class="content__person-wrapper">
+            <img
+              src="./images/image-jeremy.png"
+              alt="Jeremy Robson"
+              class="content__person-img"
+            />
+            <div class="content__person-info">
+              <p class="content__person-report">Report for</p>
+              <h1 class="content__person-name">Jeremy Robson</h1>
+            </div>
+          </div>
 
-    Play 1hr
-    <!-- daily -->
-    Previous - 2hrs
-    <!-- daily -->
-    10hrs
-    <!-- weekly -->
-    Previous - 8hrs
-    <!-- weekly -->
-    23hrs
-    <!-- monthly -->
-    Previous - 29hrs
-    <!-- monthly -->
+          <div class="content__options">
+            <ul class="content__list">
+              <li class="content__item">
+                <a href="#" class="content__link js-link"> Daily </a>
+              </li>
+              <li class="content__item">
+                <a href="#" class="content__link js-link"> Weekly </a>
+              </li>
+              <li class="content__item">
+                <a href="#" class="content__link js-link"> Monthly </a>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-    Study 0hrs
-    <!-- daily -->
-    Previous - 1hr
-    <!-- daily -->
-    4hrs
-    <!-- weekly -->
-    Previous - 7hrs
-    <!-- weekly -->
-    13hrs
-    <!-- monthly -->
-    Previous - 19hrs
-    <!-- monthly -->
+        <div class="content__box content__box--work">
+          <div class="content__box-title-wrapper">
+            <h2 class="content__box-title-option">Work</h2>
 
-    Exercise 1hr
-    <!-- daily -->
-    Previous - 1hr
-    <!-- daily -->
-    4hrs
-    <!-- weekly -->
-    Previous - 5hrs
-    <!-- weekly -->
-    11hrs
-    <!-- monthly -->
-    Previous - 18hrs
-    <!-- monthly -->
+            <a href="#" class="content__box-elipsis">
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </div>
 
-    Social 1hr
-    <!-- daily -->
-    Previous - 3hrs
-    <!-- daily -->
-    5hrs
-    <!-- weekly -->
-    Previous - 10hrs
-    <!-- weekly -->
-    21hrs
-    <!-- monthly -->
-    Previous - 23hrs
-    <!-- monthly -->
+          <div class="content__box-hours">
+            <p class="content__box-hour">32hrs</p>
+            <p class="content__box-date">Last week - 36hrs</p>
+          </div>
+        </div>
 
-    Self Care 0hrs
-    <!-- daily -->
-    Previous - 1hr
-    <!-- daily -->
-    2hrs
-    <!-- weekly -->
-    Previous - 2hrs
-    <!-- weekly -->
-    7hrs
-    <!-- monthly -->
-    Previous - 11hrs
-    <!-- monthly -->
+        <div class="content__box content__box--play">
+          <div class="content__box-title-wrapper">
+            <h2 class="content__box-title-option">Play</h2>
+
+            <a href="#" class="content__box-elipsis">
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div class="content__box-hours">
+            <p class="content__box-hour">32hrs</p>
+            <p class="content__box-date">Last week - 36hrs</p>
+          </div>
+        </div>
+
+        <div class="content__box content__box--study">
+          <div class="content__box-title-wrapper">
+            <h2 class="content__box-title-option">Study</h2>
+
+            <a href="#" class="content__box-elipsis">
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div class="content__box-hours">
+            <p class="content__box-hour">32hrs</p>
+            <p class="content__box-date">Last week - 36hrs</p>
+          </div>
+        </div>
+
+        <div class="content__box content__box--exercise">
+          <div class="content__box-title-wrapper">
+            <h2 class="content__box-title-option">Exercise</h2>
+
+            <a href="#" class="content__box-elipsis">
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div class="content__box-hours">
+            <p class="content__box-hour">32hrs</p>
+            <p class="content__box-date">Last week - 36hrs</p>
+          </div>
+        </div>
+
+        <div class="content__box content__box--social">
+          <div class="content__box-title-wrapper">
+            <h2 class="content__box-title-option">Social</h2>
+
+            <a href="#" class="content__box-elipsis">
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div class="content__box-hours">
+            <p class="content__box-hour">32hrs</p>
+            <p class="content__box-date">Last week - 36hrs</p>
+          </div>
+        </div>
+
+        <div class="content__box content__box--self-care">
+          <div class="content__box-title-wrapper">
+            <h2 class="content__box-title-option">Self Care</h2>
+
+            <a href="#" class="content__box-elipsis">
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div class="content__box-hours">
+            <p class="content__box-hour">32hrs</p>
+            <p class="content__box-date">Last week - 36hrs</p>
+          </div>
+        </div>
+      </main>
+    </div>
 
     <footer class="attribution">
       Challenge by

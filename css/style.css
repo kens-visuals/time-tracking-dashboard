@@ -1,0 +1,168 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+img,
+picture {
+  max-width: 100%;
+  display: block; }
+
+input,
+button,
+textarea,
+select {
+  font: inherit; }
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important; } }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  background-color: #0f1424;
+  color: #f4f6fb;
+  font-size: 1.6rem;
+  font-family: 'Rubik', sans-serif;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  justify-items: center; }
+
+.container {
+  width: 87%;
+  max-width: 40rem;
+  display: flex;
+  justify-content: center; }
+
+.content {
+  width: 100%;
+  margin: 10rem 0; }
+  .content > * {
+    border-radius: 1.5rem; }
+    .content > *:not(:last-child) {
+      margin-bottom: 6rem; }
+  .content__person {
+    background-color: #1c1f4a; }
+    .content__person-wrapper {
+      background-color: #5847eb;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      padding: 3rem;
+      display: flex;
+      align-items: center; }
+    .content__person-img {
+      width: 25%;
+      border: 3px solid #f4f6fb;
+      border-radius: 50%; }
+    .content__person-info {
+      margin-left: 2rem; }
+    .content__person-report {
+      color: #bdc1ff;
+      font-size: clamp(1.4rem, 2vw, 1.6rem);
+      font-weight: 400; }
+    .content__person-name {
+      font-size: clamp(2.3rem, 2vw, 4rem);
+      font-weight: 300; }
+  .content__options {
+    padding: 2rem 2rem 2rem 3.5rem; }
+  .content__list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between; }
+  .content__link {
+    color: #6f76c8;
+    font-size: clamp(1.8rem, 2vw, 2rem);
+    text-decoration: none;
+    transition: all 0.2s; }
+    .content__link--active {
+      color: #f4f6fb; }
+    .content__link:hover {
+      color: #f4f6fb; }
+  .content__box {
+    background-color: #1c1f4a;
+    padding: 2.5rem;
+    position: relative;
+    transition: all 0.2s; }
+    .content__box::before {
+      content: '';
+      width: 100%;
+      background-repeat: no-repeat;
+      border-radius: 1.5rem;
+      padding: 3rem;
+      position: absolute;
+      top: -3.5rem;
+      left: 0;
+      z-index: -1; }
+    .content__box:hover {
+      cursor: pointer;
+      background-color: #33387a; }
+    .content__box--work::before {
+      background-image: url(../images/icon-work.svg);
+      background-color: #ff8c66;
+      background-position: top -1.2rem right 1.5rem; }
+    .content__box--play::before {
+      background-image: url(../images/icon-play.svg);
+      background-color: #56c2e6;
+      background-position: top -0.6rem right 1.5rem; }
+    .content__box--study::before {
+      background-image: url(../images/icon-study.svg);
+      background-color: #ff5c7c;
+      background-position: top -0.8rem right 1.5rem; }
+    .content__box--exercise::before {
+      background-image: url(../images/icon-exercise.svg);
+      background-color: #4acf81;
+      background-position: top -0.5rem right 1.5rem; }
+    .content__box--social::before {
+      background-image: url(../images/icon-social.svg);
+      background-color: #7536d3;
+      background-position: top -1.5rem right 1.5rem; }
+    .content__box--self-care::before {
+      background-image: url(../images/icon-self-care.svg);
+      background-color: #f1c65b;
+      background-position: top -1.5rem right 1.5rem; }
+    .content__box-title-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+    .content__box-title-option {
+      font-size: clamp(1.9rem, 2vw, 2rem);
+      font-weight: 400; }
+    .content__box-elipsis {
+      fill: #bdc1ff; }
+      .content__box-elipsis svg:hover {
+        fill: #f4f6fb;
+        transition: all 0.2s; }
+    .content__box-hours {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+    .content__box-hour {
+      font-size: clamp(3rem, 3vw, 6rem);
+      font-weight: 300; }
+    .content__box-date {
+      color: #bdc1ff;
+      font-size: clamp(1.5rem, 2vw, 2rem);
+      opacity: 0.8; }
+
+.attribution {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  text-align: center;
+  margin: 1rem 0; }
+  .attribution__link:link, .attribution__link:visited {
+    text-transform: uppercase;
+    transition: all 0.2s; }
