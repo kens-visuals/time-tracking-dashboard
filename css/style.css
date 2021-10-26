@@ -59,7 +59,7 @@ body {
   grid-gap: 6rem; }
   @media (min-width: 810px) {
     .content {
-      grid-template-columns: 20rem repeat(auto-fit, minmax(10rem, 20rem));
+      grid-template-columns: 20rem repeat(auto-fit, minmax(15rem, 20rem));
       grid-template-rows: repeat(2, 20rem);
       grid-auto-rows: 20rem;
       grid-gap: 2rem 2.5rem;
@@ -249,7 +249,7 @@ body {
 
 .attribution {
   color: #f4f6fb;
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: 1rem;
   text-align: center;
   margin-block: 1rem; }
   .attribution__link:link, .attribution__link:visited {
