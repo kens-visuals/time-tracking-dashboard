@@ -33,6 +33,18 @@ const setTitlesText = async () => {
   [...titles].forEach((el, i) => (el.textContent = dataTitles[i]));
 };
 
+// const setTimeFrame = async (current, previous, time) => {
+//   const data = await getData();
+//   // const timefr = data.map(({ timeframes }) => timeframes);
+//   // console.log(timefr);
+
+//   console.log(setCurrentDateText(() => data.map(current)));
+// };
+
+// (async () => {
+//   console.log(setTimeFrame(({ timeframes }) => timeframes.daily.current));
+// })();
+
 const getDailyTimeframes = async () => {
   const data = await getData();
 
@@ -92,9 +104,7 @@ links.forEach((link) => {
   });
 });
 
-const init = function () {
+(() => {
   getWeeklyTimeframes();
   setTitlesText();
-};
-
-init();
+})();
