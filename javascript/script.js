@@ -33,69 +33,34 @@ const setTitlesText = async () => {
   [...titles].forEach((el, i) => (el.textContent = dataTitles[i]));
 };
 
-// const setTimeFrame = async (current, previous, time) => {
-//   const data = await getData();
-//   // const timefr = data.map(({ timeframes }) => timeframes);
-//   // console.log(timefr);
-
-//   console.log(setCurrentDateText(() => data.map(current)));
-// };
-
-// (async () => {
-//   console.log(setTimeFrame(({ timeframes }) => timeframes.daily.current));
-// })();
-
-const getDailyTimeframes = async () => {
+const setTimeFrame = async (current, previous, time) => {
   const data = await getData();
 
-  const [currDates, prevDates] = data.reduce(
-    (acc, { timeframes: { daily } }) => {
-      acc[0].push(daily.current);
-      acc[1].push(daily.previous);
-      return acc;
-    },
-    [[], []]
-  );
-
-  setCurrentDateText(currDates);
-  setPreviousDateText(prevDates, 'Yesterday');
+  setCurrentDateText(data.map(current));
+  setPreviousDateText(data.map(previous), time);
 };
 
-const getWeeklyTimeframes = async () => {
-  const data = await getData();
-
-  const [currDates, prevDates] = data.reduce(
-    (acc, { timeframes: { weekly } }) => {
-      acc[0].push(weekly.current);
-      acc[1].push(weekly.previous);
-      return acc;
-    },
-    [[], []]
-  );
-
-  setCurrentDateText(currDates);
-  setPreviousDateText(prevDates, 'Last week');
-};
-
-const getMonthlyTimeframes = async () => {
-  const data = await getData();
-
-  const [currDates, prevDates] = data.reduce(
-    (acc, { timeframes: { monthly } }) => {
-      acc[0].push(monthly.current);
-      acc[1].push(monthly.previous);
-      return acc;
-    },
-    [[], []]
-  );
-
-  setCurrentDateText(currDates);
-  setPreviousDateText(prevDates, 'Last Month');
-};
-
-dailyBtn.addEventListener('click', () => getDailyTimeframes());
-weeklyBtn.addEventListener('click', () => getWeeklyTimeframes());
-monthlyBtn.addEventListener('click', () => getMonthlyTimeframes());
+dailyBtn.addEventListener('click', () =>
+  setTimeFrame(
+    ({ timeframes }) => timeframes.daily.current,
+    ({ timeframes }) => timeframes.daily.previous,
+    'Yesterday'
+  )
+);
+weeklyBtn.addEventListener('click', () =>
+  setTimeFrame(
+    ({ timeframes }) => timeframes.weekly.current,
+    ({ timeframes }) => timeframes.weekly.previous,
+    'Last Week'
+  )
+);
+monthlyBtn.addEventListener('click', () =>
+  setTimeFrame(
+    ({ timeframes }) => timeframes.monthly.current,
+    ({ timeframes }) => timeframes.monthly.previous,
+    'Last Month'
+  )
+);
 
 links.forEach((link) => {
   link.addEventListener('click', (e) => {
@@ -105,6 +70,10 @@ links.forEach((link) => {
 });
 
 (() => {
-  getWeeklyTimeframes();
+  setTimeFrame(
+    ({ timeframes }) => timeframes.weekly.current,
+    ({ timeframes }) => timeframes.weekly.previous,
+    'Yesterday'
+  );
   setTitlesText();
 })();
