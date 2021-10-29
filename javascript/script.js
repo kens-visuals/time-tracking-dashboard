@@ -19,19 +19,14 @@ const setPreviousDateText = (timeframe, dateMsg) =>
 const getData = async function () {
   try {
     const data = await fetch('../data.json');
-    const jsonData = await data.json();
-    return jsonData;
+    return await data.json();
   } catch (error) {
     console.error(`❌ ${error.message} ❌`);
   }
 };
 
-const setTitlesText = async () => {
-  const data = await getData();
-  const dataTitles = data.map((el) => el.title);
-
-  [...titles].forEach((el, i) => (el.textContent = dataTitles[i]));
-};
+const setTitlesText = async () =>
+  [...(await getData())].map((el, i) => (titles[i].textContent = el.title));
 
 const setTimeFrame = async (current, previous, time) => {
   const data = await getData();
@@ -73,7 +68,7 @@ links.forEach((link) => {
   setTimeFrame(
     ({ timeframes }) => timeframes.weekly.current,
     ({ timeframes }) => timeframes.weekly.previous,
-    'Yesterday'
+    'Last Week'
   );
   setTitlesText();
 })();

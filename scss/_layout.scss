@@ -2,7 +2,7 @@
   width: 87%;
   max-width: 40rem;
   display: flex;
-  justify-content: center;
+  place-items: center;
 
   @media (min-width: 810px) {
     max-width: 90rem;
