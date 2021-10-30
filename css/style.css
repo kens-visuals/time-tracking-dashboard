@@ -139,6 +139,7 @@ body {
     @media (min-width: 1005px) {
       .content__list {
         justify-content: center;
+        align-items: flex-start;
         flex-direction: column;
         gap: 1rem; } }
   .content__link {
