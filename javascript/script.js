@@ -21,8 +21,11 @@ const setPreviousDateText = (timeframe, dateMsg) =>
     (el, i) => (el.textContent = `${dateMsg} - ${timeframe[i]}hrs`)
   );
 
-const setTitlesText = async () =>
-  [...(await getData())].map((el, i) => (titles[i].textContent = el.title));
+const setTitlesText = async () => {
+  const data = await getData();
+
+  data.map((el, i) => (titles[i].textContent = el.title));
+};
 
 const setTimeFrame = async (current, previous, time) => {
   const data = await getData();
