@@ -6,7 +6,7 @@ const previousDates = document.querySelectorAll('.js-previous');
 
 const getData = async function () {
   try {
-    const data = await fetch('../data.json');
+    const data = await fetch('../data.json', { mode: 'no-cors' });
     return await data.json();
   } catch (error) {
     console.error(`❌ ${error.message} ❌`);
