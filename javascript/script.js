@@ -6,7 +6,7 @@ const previousDates = document.querySelectorAll('.js-previous');
 
 const getData = async function () {
   try {
-    const data = await fetch('../data.json');
+    const data = await fetch('/javascript/data.json');
     const dataJSON = await data.json();
 
     return dataJSON;
@@ -59,12 +59,14 @@ list.addEventListener('click', (e) => {
     );
 });
 
-links.forEach((link) => {
-  link.addEventListener('click', (e) => {
-    links.forEach((l) => l.classList.remove('content__link--active'));
-    e.target.classList.add('content__link--active');
+const setActiveState = function () {
+  links.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      links.forEach((l) => l.classList.remove('content__link--active'));
+      e.target.classList.add('content__link--active');
+    });
   });
-});
+};
 
 (() => {
   setTimeFrame(
@@ -73,4 +75,5 @@ links.forEach((link) => {
     'Last Week'
   );
   setTitlesText();
+  setActiveState();
 })();
