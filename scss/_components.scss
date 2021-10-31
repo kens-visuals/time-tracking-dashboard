@@ -2,7 +2,11 @@
   width: 100%;
   margin: 10rem 0;
   display: grid;
-  grid-gap: 6rem;
+  grid-gap: 7rem;
+
+  & > * {
+    border-radius: 1.5rem;
+  }
 
   @media (min-width: 810px) {
     grid-template-columns: 25rem repeat(auto-fit, minmax(20rem, 25rem));
@@ -10,10 +14,6 @@
     grid-auto-rows: 25rem;
     grid-gap: 3rem;
     place-content: center;
-  }
-
-  & > * {
-    border-radius: 1.5rem;
   }
 
   &__person {

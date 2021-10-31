@@ -57,7 +57,9 @@ body {
   width: 100%;
   margin: 10rem 0;
   display: grid;
-  grid-gap: 6rem; }
+  grid-gap: 7rem; }
+  .content > * {
+    border-radius: 1.5rem; }
   @media (min-width: 810px) {
     .content {
       grid-template-columns: 25rem repeat(auto-fit, minmax(20rem, 25rem));
@@ -65,8 +67,6 @@ body {
       grid-auto-rows: 25rem;
       grid-gap: 3rem;
       place-content: center; } }
-  .content > * {
-    border-radius: 1.5rem; }
   .content__person {
     background-color: #1c1f4a; }
     @media (min-width: 810px) {
