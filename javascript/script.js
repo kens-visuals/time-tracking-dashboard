@@ -6,7 +6,9 @@ const previousDates = document.querySelectorAll('.js-previous');
 
 const getData = async function () {
   try {
-    const data = await fetch('/javascript/data.json');
+    const data = await fetch(
+      'https://raw.githubusercontent.com/kens-visuals/time-tracking-dashboard/main/javascript/data.json'
+    );
     const dataJSON = await data.json();
 
     return dataJSON;
