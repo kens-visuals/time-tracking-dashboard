@@ -229,8 +229,7 @@ body {
           flex-direction: column; } }
     .content__box-hour {
       font-size: 3rem;
-      font-weight: 300;
-      opacity: 0.9; }
+      font-weight: 300; }
       @media (min-width: 810px) {
         .content__box-hour {
           font-size: 5.5rem; } }
