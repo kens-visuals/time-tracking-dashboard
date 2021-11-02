@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Live Site URL: [https://kens-visuals.github.io/time-tracking-dashboard/](https://kens-visuals.github.io/time-tracking-dashboard/)
-- Solution URL: [TO_BE_UPDATED](TO_BE_UPDATED)
+- Solution URL: [https://www.frontendmentor.io/solutions/time-tracking-dashboard-with-bem-scss-and-vanilla-js--5P53ADEz](https://www.frontendmentor.io/solutions/time-tracking-dashboard-with-bem-scss-and-vanilla-js--5P53ADEz)
 
 ## My process
 
