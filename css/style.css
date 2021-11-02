@@ -274,8 +274,8 @@ body {
 
 @keyframes fade-in-left {
   from {
-    transform: translateX(-35px);
-    opacity: 0; }
+    opacity: 0;
+    transform: translateX(-35px); }
   to {
-    transform: translateX(0);
-    opacity: 1; } }
+    opacity: 1;
+    transform: translateX(0); } }

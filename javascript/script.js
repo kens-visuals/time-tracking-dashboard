@@ -1,5 +1,5 @@
-const links = document.querySelectorAll('.js-link');
 const list = document.querySelector('.js-list');
+const links = document.querySelectorAll('.js-link');
 const titles = document.querySelectorAll('.js-title');
 const currentDates = document.querySelectorAll('.js-current');
 const previousDates = document.querySelectorAll('.js-previous');
@@ -9,9 +9,7 @@ const getData = async function () {
     const data = await fetch(
       'https://raw.githubusercontent.com/kens-visuals/time-tracking-dashboard/main/javascript/data.json'
     );
-    const dataJSON = await data.json();
-
-    return dataJSON;
+    return await data.json();
   } catch (error) {
     console.error(`❌ ${error.message} ❌`);
   }
@@ -25,11 +23,8 @@ const setPreviousDateText = (timeframe, dateMsg) =>
     (el, i) => (el.textContent = `${dateMsg} - ${timeframe[i]}hrs`)
   );
 
-const setTitlesText = async () => {
-  const data = await getData();
-
-  data.map((el, i) => (titles[i].textContent = el.title));
-};
+const setTitlesText = async () =>
+  [...(await getData())].map((el, i) => (titles[i].textContent = el.title));
 
 const setTimeFrame = async (current, previous, time) => {
   const data = await getData();
